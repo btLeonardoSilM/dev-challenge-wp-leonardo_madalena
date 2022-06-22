@@ -1,0 +1,3 @@
+1 - Criar função no js on-click
+2 - usar document.QuerySelector()
+3 - 
