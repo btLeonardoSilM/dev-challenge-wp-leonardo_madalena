@@ -1,9 +1,45 @@
-.nav-link {
-    color: #FFFFFF !important;
-};
+.top {
+   padding-top: 10px;
+   padding-bottom: 10px;
+   background-color: #3B216A;
+   text-align: center;
+   font-size: 30px !important;
 
-@media(min-width:600px) and (max-width:1000px) {
-    .nav-link{
-        color:red !important;
+}
+
+.rede_social img{
+    width: 50px !important;
+    height: 50px !important;
+}
+
+.nav-link {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    background-color: #53BB5F;
+    text-align: center;
+    font-size: 30px !important;
+}
+
+@media (max-width:500px) {
+    .top{
+        background-color: red;
     }
-};
+}
+
+.nav-item {
+    color: white;
+    margin-left: 20px;
+}
+
+.navbar {
+    --bs-navbar-color: white !important;
+}
+
+.tira_fora {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.row {
+    margin-right: 0px !important;
+}
