@@ -1,0 +1,161 @@
+/* CLASSES */
+
+.tipos_contato {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #3B216A;
+    color: white;
+    text-align: center;
+}
+
+
+.tipos_contato img{
+    width: 30px !important;
+    height: 25px !important;
+}
+
+.nav-link {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    background-color: #53BB5F;
+    text-align: center;
+    font-size: 16px !important;
+    color: white !important;
+    margin-left: 10px;
+}
+.nav-link img{
+    margin-left: 327px;
+    width: 100px;
+}
+
+.navbar-nav{
+    margin-left: 130px;
+}
+
+.alinha_ideiaa {
+    margin-top: 80px !important;
+    margin-left: 283px;
+    font-size: 40px;
+}
+
+.alinha_ideiab {
+    margin-top: 80px !important;
+    margin-left: -136px;
+    font-size: 20px;
+}
+
+.next img{
+    width: 53px !important;
+    height: 31px !important;
+    margin-top: 69px;
+    /* margin-top: 0px; */
+}
+.next {
+    margin-top: 50px !important;
+}
+
+
+.txt-portifolio{
+    font-size: 20px !important;
+    color: #ffffff;
+}
+
+
+.txt-clientes{
+    margin-top: 45px !important;
+    font-size: 20px !important;
+    color: #3B216A;
+    text-align: center;
+    /* text-decoration-style: revert !important; */
+    font-weight: bold;
+}
+
+.row.azul{
+    background-color: #3B216A;
+}
+
+.row>*{
+    padding-right: 0px !important; 
+    padding-left: 0px !important; 
+}
+
+.blog-imga img{
+/* text-align: center; */
+margin-top: 30px;
+margin-left: 124px;
+}
+.blog-imgb img{
+/* text-align: center; */
+margin-top: 30px;
+margin-left: 25px;
+}
+.dataa{margin-top: 12px;color: #A9A9A9;margin-left: 122px;}
+.datab{margin-top: 12px;color: #A9A9A9;margin-left: 24px;}
+/* ID'S */
+
+#portifolio{    
+    margin-top: 80px;
+}
+
+#gp-321{
+    width: 626px !important;
+    height: 682px !important;
+}
+
+#box:hover {
+    width: 600px !important;
+}
+#box {
+    background:#9BEB51 !important;
+    height: 166px !important;
+    width: 50px !important;
+    margin-top: 69px !important;
+    margin-bottom: 92px;
+    margin-left: -158px !important;
+    margin-right: 11px !important;
+    transition: width 2s !important;
+}
+
+#box2 {
+    background:#9BEB51 !important;
+    height: 186px !important;
+    width: 690px !important;
+    margin-top: 90px !important;
+    margin-bottom: 90px;
+}
+
+#componente64{
+    width: 161px;
+    height: 31px;
+    margin-top: 44px;
+}
+
+#txt-clientes {
+    color: #3B216A;
+    font-size: 24;
+}
+
+#logos{
+    height: 100px !important;
+    width: 100px !important;
+    margin-left: 250px;
+}
+
+#txt-bloga{
+    margin-left: 122px;
+}
+
+#txt-blogb{
+    margin-left: 25px;
+}
+#blog{color: #3B216A;font-size: 31px;text-align: center;font-weight: 800;margin-top: 49px !important;}
+
+
+/* medias */
+@media only screen and (max-device-width: 900px) {
+        
+}
+
+/* teste */
+
+* {margin: 0;padding: 0;}
