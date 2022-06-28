@@ -4,13 +4,50 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="assets/css/arquivo.css">
+  <script type="text/javascript" src="assets/js/*"></script>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-    crossorigin="anonymous"></script>
-  <script src="assets/js/touchcarousel.js?_v=1.23.1" type="text/javascript"></script>
-  <link rel="stylesheet" href="assets/css/touchcarousel.min.css?_v=1.23.1" type="text/css">
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css" rel="stylesheet">
+  <!--<script src="assets/js/arquivo.js"></script>-->
+  <script>
+    $(document).ready(function () {
+      $(".box").mouseenter(function () {
+        $(this).animate({
+          opacity: '1',
+          width: '600px'
+        });
+      });
+      $(".box").mouseleave(function () {
+        $(this).animate({
+          opacity: '1',
+          width: '50px'
+        });
+      });
+      $(".carousel2").slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+      });
+      $(".carousel3").slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      });
+
+    });
+
+  </script>
 </head>
 
 <body>
@@ -65,7 +102,10 @@
     </div>
   </div>
 
-  <!--<div class="container-fluid tira_fora">-->
+  <!-- Este é um carousel feito com bootstrap.
+  funcionava normalmente, até acrescentar o slick.
+  Eu encontrei o erro, a ferramenta de desenvolvedor acusa: Document has multiple static elements with the same id attribute: demo
+  -->
   <div class="container-fluid">
     <div class="row sem-pad">
       <div class="col">
@@ -79,29 +119,45 @@
           </div>
 
           <!-- The slideshow/carousel -->
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="img/Grupo 320.png" alt="" style="width:100%">
-            </div>
-            <div class="carousel-item">
-              <img src="img/Grupo 320.png" alt="" style="width:100%">
-            </div>
-            <div class="carousel-item">
-              <img src="img/Grupo 320.png" alt="" style="width:100%">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col">
+                <!-- Carousel -->
+                <div id="demo" class="carousel slide" data-bs-ride="carousel">
+                  <!-- Indicators/dots -->
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                  </div>
+
+                  <!-- The slideshow/carousel -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="img/Grupo 320.png" alt="" style="width:100%">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="img/Grupo 320.png" alt="" style="width:100%">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="img/Grupo 320.png" alt="" style="width:100%">
+                    </div>
+                  </div>
+                  <!-- Left and right controls/icons -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-          <!-- Left and right controls/icons -->
-          <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-          </button>
         </div>
       </div>
     </div>
   </div>
-
   <div class="container-fluid">
     <div class="row">
       <div class="col alinha_ideiaa">
@@ -125,13 +181,13 @@
         <span><img id="gp-321" src="img/Grupo 321.png" alt=""></span>
       </div>
       <div class="col next">
-        <div id="box">
+        <div class="box">
           <span><img id="next" src="img/next.svg" alt=""></span>
         </div>
-        <div id="box">
+        <div class="box">
           <span><img id="next" src="img/next.svg" alt=""></span>
         </div>
-        <div id="box">
+        <div class="box">
           <span><img id="next" src="img/next.svg" alt=""></span>
         </div>
       </div>
@@ -153,42 +209,44 @@
     </div>
   </div>
 
-  <!-- NÃO FUNCIONOU TENHO QUE VER DEPOIS O PQ
-  <div class="container-fluid" style="background: blue;">
+  <div class="container-fluid">
+    <div class="row" style="text-align: center;">
+      <span id="titulo-emp">EMPRESAS</span>
+    </div>
     <div class="row">
-      <div class="col">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="col">
-              <div class="carousel-item active">
-                <img id="logos" class="d-block" src="img/Grupo 46.svg" alt="First slide">
-              </div>
-            </div>
-            <div class="col">
-              <div class="carousel-item">
-                <img id="logos" class="d-block" src="img/Grupo 46.svg" alt="Second slide">
-              </div>
-            </div>
-            <div class="col">
-              <div class="carousel-item">
-                <img id="logos" class="d-block" src="img/Grupo 46.svg" alt="Third slide">
-              </div>
-            </div>
-          </div>
-          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
+      <div class="col" style="margin-bottom: 30px;">
+        <div class="carousel2">
+          <div><img src="img/Grupo 47.svg" alt="empresas" /></div>
+          <div><img src="img/Grupo 47.svg" alt="empresas" /></div>
+          <div><img src="img/Grupo 47.svg" alt="empresas" /></div>
+          <div><img src="img/Grupo 47.svg" alt="empresas" /></div>
+          <div><img src="img/Grupo 47.svg" alt="empresas" /></div>
+          <div><img src="img/Grupo 47.svg" alt="empresas" /></div>
+          <div><img src="img/Grupo 47.svg" alt="empresas" /></div>
+          <div><img src="img/Grupo 47.svg" alt="empresas" /></div>
         </div>
       </div>
     </div>
   </div>
--->
 
+  <div class="container-fluid" id="depoimento">
+    <div class="row">
+      <div class="col" style="margin-top: 40px ;">
+        <span>Depoimento</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="carousel3">
+          <div><img src="img/depoimento1.png" alt="depoimento" /></div>
+          <div><img src="img/depoimento1.png" alt="depoimento" /></div>
+          <div><img src="img/depoimento1.png" alt="depoimento" /></div>
+          <div><img src="img/depoimento1.png" alt="depoimento" /></div>
+          <div><img src="img/depoimento1.png" alt="depoimento" /></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="container-fluid">
     <div class="row" id="blog">
@@ -215,8 +273,130 @@
           </p>
         </span>
       </div>
+      <div class="row" style="text-align: center;margin-top: 30px; margin-bottom: 30px;">
+        <span><img src="img/Componente 35 – 3.svg" alt=""></span>
+      </div>
     </div>
   </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col" style="margin-top: 40px;font-size: 24px;text-align: left;background-color:#9BEB51;">
+        <div style="text-align: center;">
+          <span style="color:white;font-weight: 700;">Envie uma mensagem</span>
+        </div>
+        
+        <div style="margin-left: 200px;">
+          <form action="/action_page.php">
+            <table>
+              <tr>
+                <th><input type="text" class="form-control" id="" placeholder="Nome" name=""
+                    style="width: 250px;    margin-top: 10px;     margin-left: 8px;"></th>
+                <th><input type="tel" class="form-control" id="" placeholder="Telefone" name=""
+                    style="width: 250px;    margin-top: 10px;    margin-left: 8px;">
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <input type="email" class="form-control" id="" placeholder="Email" name=""
+                    style="width: 250px;    margin-top: 10px;    margin-left: 8px;">
+                </td>
+                <td>
+                  <input type="text" class="form-control" id="" placeholder="Sobre o que você quer falar?" name=""
+                    style="width: 250px;    margin-top: 10px;    margin-left: 8px;">
+                </td>
+              </tr>
+            </table>
+            <textarea class="form-control" rows="5" id="comment" name="text"
+              style="width: 508px;    margin-top: 10px;    margin-left: 8px;" placeholder="Digite sua mensagem"></textarea>
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" name="remember" style="margin-top: 8px;">Aceito receber e-mails
+            </label>
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" name="remember" style="margin-top: 8px;"> Aceito receber mensagens de texto
+            </label>
+            <table>
+              <label class="form-check-label">
+                <td>
+                  <input class="form-check-input" type="checkbox" name="remember" style="margin-top: 8px;">Li e aceito os termos de <a
+                  href="">política de privacidade</a>.
+                </td>
+              </label>
+              <td>
+                <button type="submit" class="btn"><img src="img/Componente 36 – 3.svg" alt=""></button>
+              </td>
+            </table>
+            
+          </form>
+        </div>
+      </div>
+      <div class="col" style="margin-top: 40px;">
+        <div style="text-align: center;color: #3B216A;font-size: 24px;font-weight: 700;">
+          <span>ENDEREÇO E OUTROS LINKS</span>
+        </div>
+        <div style="margin-top: 80px;margin-left: 160px;">
+          <table width="50%">
+            <tr>
+              <td><img src="img/Grupo 322.svg" alt="" ></td>
+              <td>Rua Gomes Jardim 201, Salas 1007/ 1008/ 1009/ 1010 Bairro Santana, Porto Alegre - RS</td>
+            </tr>
+            <tr>
+              <td><img src="img/Grupo 323.svg" alt=""></td>
+              <td>(51) 3012.3222</td>
+            </tr>
+            <tr>
+              <td><img src="img/Grupo 324.svg" alt=""></td>
+              <td>contato@agencias3.com.br</td>
+            </tr>
+            <tr>
+              <td><img src="img/facebook.svg" alt=""></td>
+              <td>facebook.com/agencias3facebook.com/agencias3</td>
+            </tr>
+            <tr>
+              <td><img src="img/Subtração 7.svg" alt=""></td>
+              <td>instagram.com/agencia_s3</td>
+            </tr>
+            <tr>
+              <td><img src="img/Grupo 325.svg" alt=""></td>
+              <td>twitter.com/agencias3</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row" style="background-color: #3B216A;">
+    
+      <div class="col-sm 3"style="margin-top: 40px;margin-bottom: 40px;">
+        <img src="img/Grupo 315.svg" alt="">
+      </div>
+      <div class="col-sm 6" style="margin-top: 40px;margin-bottom: 40px;" id="branco">
+        <div style="color: white;font-size: 22px;">
+          <span>MAPA DO SITE</span>
+        </div>
+        <div>
+          <a href="#">Sobre</a>
+          <a href="#">Serviço</a>
+          <a href="#">Portifólio</a>
+          <a href="#">Clientes</a>
+          <a href="#">Blog</a>
+          <a href="#">Trabalhe Conosco</a>
+          <a href="#">Contato</a>
+        </div>
+      </div>
+      <div class="col-sm 3"style="margin-top: 40px;margin-bottom: 40px;">
+        <div>
+          <img src="img/facebook-1.svg" alt="">
+          <img src="img/Subtração 8.svg" alt="">
+          <img src="img/Subtração 9.svg" alt="">
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
 </body>
 
 </html>
