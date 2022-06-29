@@ -137,7 +137,6 @@
 #componente64 {
     width: 161px;
     height: 31px;
-    margin-top: 44px;
 }
 
 #txt-clientes {
@@ -184,10 +183,7 @@
     font-size: 16px;
 }
 
-.carousel2 {
-    width: 1000px;
-    margin: 0 auto;
-}
+
 
 #titulo-emp {
     color: #3B216A;
@@ -215,10 +211,22 @@
     font-weight: 700;
 }
 
+.carousel1 {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.carousel2 {
+    width: 1000px;
+    margin: 0 auto;
+}
+
 .carousel3 {
     width: 1000px;
     margin: 0 auto;
 }
+
+
 
 #msg{
     background-color: #53BB5F;
@@ -226,4 +234,8 @@
 
 :root #branco{
         --bs-link-color: white !important;
+}
+
+a {
+    text-decoration:none !important;
 }
